@@ -1,0 +1,779 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>DIAMOND UNISEX SALON - Luxury Grooming</title>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-black: #060606;
+      --card-bg: #121212;
+      --card-border: #262118;
+      --gold-primary: #dfb76c;
+      --gold-secondary: #c59b48;
+      --gold-light: #fbe5ad;
+      --gold-gradient: linear-gradient(135deg, #dfb76c 0%, #aa7c11 100%);
+      --text-gray: #a6a6a6;
+      --text-white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      background-color: var(--bg-black);
+      color: var(--text-white);
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+      line-height: 1.4;
+    }
+
+    /* ---------------- HEADER ---------------- */
+    header {
+      background: rgba(6, 6, 6, 0.98);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      border-bottom: 1px solid rgba(223, 183, 108, 0.25);
+    }
+
+    .nav-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid var(--gold-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-primary);
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 1rem;
+      box-shadow: 0 0 10px rgba(223, 183, 108, 0.3);
+    }
+
+    .logo-text h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      letter-spacing: 2px;
+      color: var(--gold-primary);
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .logo-text span {
+      font-size: 0.6rem;
+      letter-spacing: 3px;
+      color: var(--text-gray);
+      display: block;
+    }
+
+    .btn-book-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      border: 1.5px solid var(--gold-primary);
+      padding: 6px 14px;
+      border-radius: 30px;
+      color: var(--gold-primary);
+      font-size: 0.76rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-book-nav:hover {
+      background: var(--gold-primary);
+      color: #000;
+    }
+
+    /* ---------------- HERO WITH MODELS ---------------- */
+    .hero-banner {
+      background: radial-gradient(circle at center, #241a0d 0%, #060606 80%);
+      border-bottom: 1px solid var(--card-border);
+      padding: 24px 15px;
+    }
+
+    .hero-container {
+      max-width: 1250px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .hero-model-box {
+      flex: 0 0 260px;
+      height: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(223, 183, 108, 0.35);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero-model-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .hero-center-content {
+      flex: 1;
+      text-align: center;
+      padding: 0 10px;
+    }
+
+    .hero-crown {
+      color: var(--gold-primary);
+      font-size: 2rem;
+      margin-bottom: 2px;
+    }
+
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: 2.8rem;
+      letter-spacing: 5px;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+
+    .hero-diamonds {
+      letter-spacing: 3px;
+      color: var(--gold-secondary);
+      font-size: 0.75rem;
+      margin-bottom: 8px;
+    }
+
+    .hero-tagline {
+      font-size: 1.15rem;
+      letter-spacing: 1px;
+      color: #ffffff;
+      margin-bottom: 14px;
+      font-weight: 300;
+    }
+
+    .hero-subtags {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.78rem;
+      letter-spacing: 3px;
+      color: #dfb76c;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    /* ---------------- SERVICES WRAPPER ---------------- */
+    .services-wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 28px 14px 80px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .section-header span {
+      font-size: 0.8rem;
+      letter-spacing: 4px;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+    }
+
+    .section-header h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.1rem;
+      letter-spacing: 4px;
+      color: var(--gold-light);
+      margin: 2px 0;
+    }
+
+    .section-header p {
+      color: var(--text-gray);
+      font-size: 0.88rem;
+    }
+
+    /* ---------------- CATEGORY PILLS ---------------- */
+    .category-pills {
+      display: flex;
+      justify-content: center;
+      max-width: 320px;
+      margin: 16px auto 26px;
+      background: #141414;
+      border: 1.5px solid var(--gold-primary);
+      border-radius: 40px;
+      padding: 4px;
+    }
+
+    .pill-tab {
+      flex: 1;
+      padding: 12px 18px;
+      border-radius: 30px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #fff;
+      transition: 0.2s;
+    }
+
+    .pill-tab.active-tab {
+      background: var(--gold-gradient);
+      color: #000;
+    }
+
+    /* ---------------- SECTION LAYOUT ---------------- */
+    .section-block {
+      margin-bottom: 60px;
+      scroll-margin-top: 80px;
+    }
+
+    .category-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .feature-poster {
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px 18px;
+      min-height: 480px;
+    }
+
+    .feature-poster::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.1) 40%, rgba(6,6,6,0.96) 100%);
+      pointer-events: none;
+    }
+
+    .poster-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .poster-content h3 {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 2.8rem;
+      color: var(--gold-primary);
+      line-height: 1;
+    }
+
+    .poster-content h4 {
+      letter-spacing: 3px;
+      font-size: 0.8rem;
+      color: #fff;
+      margin: 4px 0 5px;
+      text-transform: uppercase;
+    }
+
+    .poster-content p {
+      font-size: 0.8rem;
+      color: var(--text-gray);
+    }
+
+    /* ---------------- SERVICES GRID (4 COLUMNS) ---------------- */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      width: 100%;
+    }
+
+    .service-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 16px 8px;
+      text-align: center;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      min-height: 130px;
+    }
+
+    .service-card:active {
+      transform: scale(0.96);
+    }
+
+    .service-card:hover {
+      border-color: var(--gold-primary);
+      box-shadow: 0 6px 18px rgba(223, 183, 108, 0.2);
+    }
+
+    .card-icon {
+      width: 46px;
+      height: 46px;
+      border: 1.5px solid var(--gold-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--gold-primary);
+      margin-bottom: 8px;
+      pointer-events: none;
+    }
+
+    .service-card:hover .card-icon {
+      background: var(--gold-primary);
+      color: #000;
+    }
+
+    .service-card h4 {
+      font-size: 0.85rem;
+      color: #ffffff;
+      margin-bottom: 3px;
+      font-weight: 600;
+      pointer-events: none;
+    }
+
+    .service-card p {
+      font-size: 0.68rem;
+      color: var(--text-gray);
+      line-height: 1.2;
+      pointer-events: none;
+    }
+
+    .card-book-badge {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 0.62rem;
+      color: var(--gold-primary);
+      border: 1px solid rgba(223, 183, 108, 0.3);
+      padding: 2px 8px;
+      border-radius: 12px;
+      pointer-events: none;
+    }
+
+    /* ---------------- FOOTER ---------------- */
+    footer {
+      background-color: #040404;
+      border-top: 1px solid var(--card-border);
+      padding: 28px 16px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+      align-items: center;
+    }
+
+    .footer-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-item i {
+      font-size: 1.4rem;
+      color: var(--gold-primary);
+    }
+
+    .footer-item h5 {
+      font-size: 0.9rem;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .footer-item p {
+      font-size: 0.74rem;
+      color: var(--text-gray);
+      margin-top: 2px;
+    }
+
+    /* ---------------- BOOKING MODAL WITH DATE & TIME CHIPS ---------------- */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(6px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 14px;
+    }
+
+    .modal-card {
+      background: #131313;
+      border: 1px solid var(--gold-primary);
+      border-radius: 14px;
+      width: 100%;
+      max-width: 480px;
+      padding: 24px;
+      position: relative;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.95);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      background: none;
+      border: none;
+      color: #aaa;
+      font-size: 1.7rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .modal-card h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--gold-primary);
+      font-size: 1.35rem;
+      margin-bottom: 2px;
+    }
+
+    .modal-card p.subtitle {
+      font-size: 0.78rem;
+      color: var(--text-gray);
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-group label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: var(--gold-light);
+      margin-bottom: 6px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-group input, 
+    .form-group select {
+      width: 100%;
+      background: #090909;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 10px 12px;
+      color: #fff;
+      font-size: 0.85rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: var(--gold-primary);
+    }
+
+    input[type="date"] {
+      color-scheme: dark;
+      cursor: pointer;
+    }
+
+    .time-slot-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .time-chip {
+      background: #1c1c1c;
+      border: 1px solid #333;
+      border-radius: 6px;
+      padding: 8px 4px;
+      text-align: center;
+      font-size: 0.76rem;
+      color: #cfcfcf;
+      cursor: pointer;
+      transition: all 0.2s;
+      user-select: none;
+    }
+
+    .time-chip:hover {
+      border-color: var(--gold-primary);
+      color: #fff;
+    }
+
+    .time-chip.selected {
+      background: var(--gold-gradient);
+      color: #000;
+      font-weight: 700;
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 10px rgba(223, 183, 108, 0.3);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 12px;
+      background: var(--gold-gradient);
+      border: none;
+      border-radius: 30px;
+      color: #050505;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: filter 0.2s;
+    }
+
+    .btn-submit:hover {
+      filter: brightness(1.1);
+    }
+
+    /* ---------------- RESPONSIVE BREAKPOINTS ---------------- */
+    @media (max-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .hero-model-box {
+        flex: 0 0 210px;
+        height: 250px;
+      }
+      .hero-title {
+        font-size: 2.4rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-model-box {
+        display: none;
+      }
+      .category-layout {
+        grid-template-columns: 1fr;
+      }
+      .feature-poster {
+        min-height: 200px;
+      }
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .time-slot-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+
+  <!-- PWA INSTALLABILITY ENGINE -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#dfb76c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function() {
+        navigator.serviceWorker.register("sw.js").catch(function(err) {
+          console.log("ServiceWorker registration failed: ", err);
+        });
+      });
+    }
+  </script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <div class="logo-circle">DUS</div>
+        <div class="logo-text">
+          <h1>DIAMOND</h1>
+          <span>UNISEX SALON</span>
+        </div>
+      </a>
+
+      <button class="btn-book-nav" onclick="openModal('VIP Consultation', 'ladies')">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Book Now<br><small style="font-size:0.65rem;">8426999955</small></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION WITH BOTH MALE & FEMALE MODELS -->
+  <section class="hero-banner">
+    <div class="hero-container">
+      <div class="hero-model-box">
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80" alt="Male Model" />
+      </div>
+
+      <div class="hero-center-content">
+        <div class="hero-crown"><i class="fa-solid fa-crown"></i></div>
+        <h2 class="hero-title">DIAMOND</h2>
+        <div class="hero-diamonds">✦ UNISEX SALON ✦</div>
+        <div class="hero-tagline">Luxury Grooming for Men & Women</div>
+        <div class="hero-subtags">
+          <span>Hair</span> | <span>Beauty</span> | <span>Makeup</span> | <span>Skin Care</span>
+        </div>
+      </div>
+
+      <div class="hero-model-box">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Female Model" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <main class="services-wrapper">
+    <div class="section-header">
+      <span>— OUR —</span>
+      <h2>SERVICES</h2>
+      <p>Choose your category below</p>
+    </div>
+
+    <!-- Category Switch Pills -->
+    <div class="category-pills">
+      <a href="#gents-section" class="pill-tab active-tab" onclick="highlightTab(this)">
+        <i class="fa-solid fa-user-tie"></i> Gents
+      </a>
+      <a href="#ladies-section" class="pill-tab" onclick="highlightTab(this)">
+        <i class="fa-solid fa-spa"></i> Ladies
+      </a>
+    </div>
+
+    <!-- ================= 1. GENTS SECTION ================= -->
+    <div id="gents-section" class="section-block">
+      <div class="category-layout">
+        <div class="feature-poster" style="background-image: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=700&q=80');">
+          <div class="poster-content">
+            <h3>Gents</h3>
+            <h4>SERVICES</h4>
+            <p>Look Good. Feel Confident.</p>
+          </div>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card" onclick="openModal('Gents Hair Cut', 'gents')">
+            <div class="card-icon"><i class="fa-solid fa-scissors"></i></div>
+            <h4>Hair Cut</h4>
+            <p>Stylish & Fresh Look</p>
+            <span class="card-book-badge">Book</span>
+          </div>
+
+          <div class="service-card" onclick="openModal('Gents Hair Style', 'gents')">
+            <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <h4>Hair Style</h4>
+            <p>Trendy & Modern</p>
+            <span class="card-book-badge">Book</span>
+          </div>
+
+          <div class="service-card" onclick="openModal('Gents Head Massage', 'gents')">
+            <div class="card-icon"><i class="fa-solid fa-hand-sparkles"></i></div>
+            <h4>Head Massage</h4>
+            <p>Relax & Rejuvenate</p>
+            <span class="card-book-badge">Book</span>
+          </div>
+
+          <div class="service-card" onclick="openModal('Gents Hair Spa', 'gents')">
+            <div class="card-icon"><i class="fa-solid fa-shower"></i></div>
+            <h4>Hair Spa</h4>
+            <p>Nourish & Repair</p>
+            <span class="card-book-badge">Book</span>
+          </div>
+
+          <div class="service-card" onclick="openModal('Gents Facial', 'gents')">
+            <div class="card-icon"><i class="fa-regular fa-face-smile"></i></div>
+            <h4>Facial</h4>
+            <p>Clear & Healthy Skin</p>
+            <span class="card-book-badge">Book</span>
+          </div>
+
+          <div class="service-card" onclick="openModal('Gents Hydra Facial', 'gents')">
+            <div class="card-icon"><i class="fa-solid fa-droplet"></i></div>
+            <h4>Hydra Facial</h4>
+            <p>Deep Cleanse & Glow</p>
+            <span class="card-book-badge">Book</span>
+          </div>
+
+          <div class="service-card" onclick="openModal('Beard Grooming & Shape', 'gents')">
+            <div class="card-icon"><i class="fa-solid fa-user-ninja"></i></div>
+            <h4>Beard</h4>
+            <p>Well Groomed Look</p>
+            <span class="card-book-badge">Book</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= 2. LADIES SECTION ================= -->
+    <div id="ladies-section" class="section-block">
+      <div class="category-layout">
+        <div class="feature-poster" style="background-image: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=700&q=80');">
+          <div class="poster-content">
+            <h3>Ladies</h3>
+            <h4>SERVICES</h4>
+            <p>Enhance Your Natural Beauty</p>
+          </div>
+        </div>
+
+        <div class="services-grid">
+          <!-- 1. Hair Cut -->
+          <div class="s
